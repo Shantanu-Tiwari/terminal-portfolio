@@ -99,13 +99,13 @@ to make technology accessible to everyone.`;
       return `> skills
 
 Languages:      Python, Java, C, JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL
-Frontend:       React, Next.js, Tailwind CSS, ShadCN UI, FastAPI, Express.js, JaaFX
+Frontend:       React, React Native, Next.js, Tailwind CSS, ShadCN UI, FastAPI, Express.js
 Backend:        Node.js, Express, FastAPI, Django
 Databases:      PostgreSQL, Firebase, MongoDB
 Cloud & DevOps: Google Cloud Platform, AWS, Vercel, Docker, Jenkins, Modal
 Tools/Platforms: Git, GitHub, Docker, Jenkins, Modal, Vercel, Postman, Figma, Livebooks
-Frameworks/Libraries: React, Next.js, Tailwind CSS, ShadCN UI, FastAPI, Express.js
-Currently Learning: Deep Learning, Genomics, Advanced Data Science`;
+Frameworks/Libraries: React, React Native, Next.js, Tailwind CSS, ShadCN UI, FastAPI, Express.js
+Currently Learning: Deep Learning, App Development, Advanced Data Science`;
 
     case 'projects':
       if (args.length === 0) {
