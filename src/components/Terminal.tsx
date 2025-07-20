@@ -77,7 +77,7 @@ const Terminal: React.FC = () => {
   };
 
   const handleTabCompletion = () => {
-    const commands = ['help', 'about', 'skills', 'projects', 'contact', 'resume', 'clear', 'date', 'whoami'];
+    const commands = ['help', 'about', 'skills', 'projects', 'contact', 'resume', 'hireme', 'clear', 'date', 'whoami'];
     const matches = commands.filter(cmd => cmd.startsWith(input.toLowerCase()));
 
     if (matches.length === 1) {
@@ -108,7 +108,7 @@ const Terminal: React.FC = () => {
     addToHistory(`shantanu@portfolio:~$ ${trimmedInput}`, true);
 
     // Update command history for arrow key navigation
-    setCommandHistory(prev => [trimmedInput, ...prev].slice(0, 50)); // Keep last 50 commands
+    setCommandHistory(prev => [trimmedInput, ...prev].slice(0, 50));
     setHistoryIndex(-1);
 
     const output = commandParser(trimmedInput, [], setHistory);

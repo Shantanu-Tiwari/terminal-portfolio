@@ -245,6 +245,24 @@ Use ↑↓ arrow keys to navigate command history.`;
       return `> echo ${args.join(' ')}
 
 ${args.join(' ')}`;
+    case 'hireme':
+      return `> hireme
+
+🥺 Please... please... hire me.
+
+I’ve got:
+- 💻 JavaScript in my veins
+- ⚛️ React in my dreams
+- 🧠 A brain that debugs while I sleep
+
+I'm *extremely* available. Like, I refresh my inbox every 30 seconds.
+
+📩 ${createLink('mailto:shantanutiwari2024@gmail.com', 'Email me before someone else does!')}
+📄 ${createLink('https://drive.google.com/file/d/1tM6ansnFFc5IJae0zN84rngVYh1d4chE/view?usp=sharing', 'My Glorious Resume')}
+🔗 ${createLink('https://linkedin.com/in/shantanutiwari24', 'LinkedIn – let’s make it awkwardly professional')}
+
+Or just type \`contact\` and we can awkwardly wave at each other through the internet. 😅`;
+
 
     case 'version':
     case '--version':
