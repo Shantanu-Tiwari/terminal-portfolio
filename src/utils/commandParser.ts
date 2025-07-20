@@ -256,7 +256,6 @@ Runtime: Browser (${navigator.userAgent.split(' ')[0]})
 Author: Shantanu Tiwari`;
 
     default:
-      // Handle common typos
       if (['hep', 'hlep', 'hepl'].includes(cmd)) {
         return `Did you mean 'help'?
 

@@ -28,14 +28,12 @@ const Terminal: React.FC = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom when history updates
   useEffect(() => {
     if (terminalRef.current) {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
     }
   }, [history]);
 
-  // Focus input on component mount and when clicking on terminal
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
@@ -104,14 +102,12 @@ const Terminal: React.FC = () => {
     setCommandHistory(prev => [trimmedInput, ...prev].slice(0, 50)); // Keep last 50 commands
     setHistoryIndex(-1);
 
-    // Process the command
     const output = commandParser(trimmedInput, [], setHistory);
     
     if (output) {
       addToHistory(output, false, trimmedInput.toLowerCase().startsWith('error'));
     }
 
-    // Clear input
     setInput('');
   };
 
@@ -133,7 +129,6 @@ const Terminal: React.FC = () => {
       'text-foreground'
     }`;
 
-    // Handle JSX content (like links)
     if (typeof item.text === 'string' && item.text.includes('<a ')) {
       return (
         <div key={index} className={className}>
@@ -159,24 +154,30 @@ const Terminal: React.FC = () => {
         className="flex-1 overflow-y-auto terminal-scroll p-4 pb-2"
       >
         {history.map((item, index) => renderHistoryItem(item, index))}
-        
-        <div className="command-line mt-2">
-          <span className="terminal-prompt">shantanu@portfolio:~$ </span>
-          <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className="terminal-input flex-1 bg-transparent border-none outline-none"
-            autoComplete="off"
-            spellCheck="false"
-          />
-          <span className="cursor"></span>
+
+        <div className="command-line">
+          <span className="terminal-prompt">shantanu@portfolio:~$</span>
+          <div className="relative">
+            <input
+                ref={inputRef}
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="terminal-input caret-transparent pr-2"
+                autoFocus
+                spellCheck={false}
+            />
+            <span className="absolute left-0 top-0 pointer-events-none select-none flex">
+      {/* Invisible mirror to calculate input width */}
+              <span className="invisible">{input}</span>
+              {/* Cursor follows text */}
+              <span className="cursor" />
+    </span>
+          </div>
         </div>
-      </div>
-      
-      <div className="text-xs text-muted-foreground p-4 pt-0 border-t border-muted/20">
+
+        <div className="text-xs text-muted-foreground p-4 pt-0 border-t border-muted/20">
         <p>Tip: Use Tab for auto-completion, ↑↓ for command history</p>
       </div>
     </div>

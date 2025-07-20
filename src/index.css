@@ -4,22 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Terminal Portfolio Design System */
-
 @layer base {
   :root {
-    /* Terminal Color Scheme - Hacker Classic */
-    --terminal-bg: 222 87% 2%;         /* Near black background */
-    --terminal-text: 123 100% 67%;     /* Bright green terminal text */
-    --terminal-text-dim: 123 40% 45%;  /* Dimmed green for secondary text */
-    --terminal-prompt: 123 100% 67%;   /* Green prompt color */
-    --terminal-cursor: 123 100% 67%;   /* Blinking cursor */
-    --terminal-link: 190 100% 67%;     /* Cyan for links */
-    --terminal-error: 0 84% 60%;       /* Red for errors */
-    --terminal-success: 123 100% 67%;  /* Green for success */
-    --terminal-warning: 45 100% 51%;   /* Yellow for warnings */
-    
-    /* Semantic tokens for the rest of the app */
+
+    --terminal-bg: 222 87% 2%;
+    --terminal-text: 123 100% 67%;
+    --terminal-text-dim: 123 40% 45%;
+    --terminal-prompt: 123 100% 67%;
+    --terminal-cursor: 123 100% 67%;
+    --terminal-link: 190 100% 67%;
+    --terminal-error: 0 84% 60%;
+    --terminal-success: 123 100% 67%;
+    --terminal-warning: 45 100% 51%;
+
     --background: 222 87% 2%;
     --foreground: 123 100% 67%;
     --primary: 123 100% 67%;
@@ -50,7 +47,7 @@
     line-height: 1.4;
   }
 
-  /* Terminal-specific styles */
+
   .terminal-container {
     @apply min-h-screen bg-background text-foreground p-4;
     font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -92,7 +89,6 @@
 }
 
 @layer components {
-  /* Blinking cursor animation */
   .cursor {
     @apply inline-block w-2 h-4 ml-1;
     background-color: hsl(var(--terminal-cursor));
@@ -108,7 +104,6 @@
     }
   }
 
-  /* Terminal command styling */
   .command-line {
     @apply flex items-center gap-1;
   }
@@ -117,7 +112,6 @@
     @apply mt-1 mb-2;
   }
 
-  /* Scrollbar styling for terminal */
   .terminal-scroll::-webkit-scrollbar {
     width: 8px;
   }
