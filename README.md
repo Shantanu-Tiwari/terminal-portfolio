@@ -2,7 +2,7 @@
 
 A slick, interactive developer portfolio that lives inside a simulated terminal. Built with modern tools like React, Vite, TypeScript, and Tailwind CSS.
 
-**➡️ Live Demo: [your-portfolio-url.com](https://your-portfolio-url.com)**
+**➡️ Live Demo: [your-portfolio-url.com]([https://your-portfolio-url.com](https://shantanu-terminal.vercel.app/))**
 
 ---
 
