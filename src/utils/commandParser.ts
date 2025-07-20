@@ -147,7 +147,7 @@ Use 'projects' to list all projects.`;
 
 You can reach me via:
 
-Email:      ${createLink('mailto:shantanutiwari240704@gmail.com', 'shantanutiwari2024@gmail.com')}
+Email:      ${createLink('mailto:shantanutiwari240704@gmail.com', 'shantanutiwari240704@gmail.com')}
 LinkedIn:   ${createLink('https://linkedin.com/in/shantanutiwari24', 'linkedin.com/in/shantanutiwari24')}
 GitHub:     ${createLink('https://github.com/Shantanu-Tiwari', 'github.com/Shantanu-Tiwari')}
 Portfolio:  ${createLink('https://portfolio-okul.vercel.app/', 'portfolio-okul.vercel.app')}
