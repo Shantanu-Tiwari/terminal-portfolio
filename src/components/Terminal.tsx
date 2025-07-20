@@ -69,13 +69,13 @@ const Terminal: React.FC = () => {
 
     let newIndex = historyIndex;
     if (direction === 'up') {
-      newIndex = historyIndex < commandHistory.length - 1 ? historyIndex + 1 : historyIndex;
+      newIndex = historyIndex +1 < commandHistory.length ? historyIndex + 1 : historyIndex;
     } else {
-      newIndex = historyIndex > -1 ? historyIndex - 1 : -1;
+      newIndex = historyIndex-1 >= -1 ? historyIndex - 1 : -1;
     }
 
     setHistoryIndex(newIndex);
-    setInput(newIndex === -1 ? '' : commandHistory[commandHistory.length - 1 - newIndex]);
+    setInput(newIndex === -1 ? '' : commandHistory[newIndex]);
   };
 
   const handleTabCompletion = () => {

@@ -158,7 +158,7 @@ technical discussions, or just to say hello!`;
     case 'resume':
       // Simulate opening resume
       setTimeout(() => {
-        window.open('https://drive.google.com/file/d/example-resume-link/view', '_blank');
+        window.open('https://drive.google.com/file/d/1tM6ansnFFc5IJae0zN84rngVYh1d4chE/view?usp=sharing', '_blank');
       }, 500);
       return `> resume
 
